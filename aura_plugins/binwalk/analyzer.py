@@ -79,3 +79,16 @@ def analyze(*, location: ScanLocation):
                 },
                 tags = {"binwalk", f"binwalk_{result.module.lower()}"}
             )
+
+
+# Dump of config section from main aura config
+
+"""
+binwalk:  # Binwalk scanner configuration
+  # enabled: false  # You can disable the whole binwalk analysis here which has impact on performance
+  mode: blacklist
+  mimetypes:
+    - "^text/."  # Do not analyze text files
+    - "application/zip"
+    - "application/gzip"
+"""
